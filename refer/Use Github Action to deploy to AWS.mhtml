@@ -1,0 +1,1140 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline.html
+Subject: Use Github Action to deploy to AWS
+Date: Mon, 26 Jun 2023 15:01:52 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--RmK1zNTmaVWeJ7F1ol0HF6upKAOWg7O7xDArGusHI8----"
+
+
+------MultipartBoundary--RmK1zNTmaVWeJ7F1ol0HF6upKAOWg7O7xDArGusHI8----
+Content-Type: text/html
+Content-ID: <frame-7D55C2214A3ABFBF006B425E1A8DE81B@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline.html
+
+<!-- saved from url=3D(0080)https://resume.htmd.dev/blog/Use%20Github%20Act=
+ion%20to%20deploy%20to%20AWS.html --><html><head><meta http-equiv=3D"Conten=
+t-Type" content=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" typ=
+e=3D"text/css" href=3D"cid:css-fc8a6b16-574a-4830-b0bd-29aa8c9d3a9a@mhtml.b=
+link" /><title>Use Github Action to deploy to AWS</title></head><body data-=
+new-gr-c-s-check-loaded=3D"14.1113.0" data-gr-ext-installed=3D""><article i=
+d=3D"8c8faf1c-b6d1-4a2a-9883-b427a54cbda3" class=3D"page sans"><header><img=
+ class=3D"page-cover-image" src=3D"https://sakai.cs.miu.edu/access/content/=
+group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/photo-14=
+87058792275-0ad4aaf24ca7" style=3D"object-position:center 50%"><div class=
+=3D"page-header-icon page-header-icon-with-cover"><span class=3D"icon">=F0=
+=9F=92=AB</span></div><h1 class=3D"page-title">Use Github Action to deploy =
+to AWS</h1></header><div class=3D"page-body"><p id=3D"0122751c-7b80-41b0-b3=
+24-2429b69b1782" class=3D""><strong><a href=3D"https://www.linkedin.com/in/=
+htmduc/">Trong Minh Duc Hoang</a></strong> | <em>Feb 7, 2023</em></p><p id=
+=3D"ba13b53b-c8c1-40f7-af30-6130c2128918" class=3D"">
+</p><nav id=3D"8ddd0a72-2e8d-4b16-9b46-fb2b300eca09" class=3D"block-color-g=
+ray table_of_contents"><div class=3D"table_of_contents-item table_of_conten=
+ts-indent-0"><a class=3D"table_of_contents-link" href=3D"https://resume.htm=
+d.dev/blog/Use%20Github%20Action%20to%20deploy%20to%20AWS.html#d4a75cdc-8e3=
+0-4b59-b0b7-5366518bb2f2">Overview</a></div><div class=3D"table_of_contents=
+-item table_of_contents-indent-0"><a class=3D"table_of_contents-link" href=
+=3D"https://resume.htmd.dev/blog/Use%20Github%20Action%20to%20deploy%20to%2=
+0AWS.html#d41b9397-1fec-4ee7-bf28-3ccb1c52d0a5"><strong>Prerequisite</stron=
+g></a></div><div class=3D"table_of_contents-item table_of_contents-indent-0=
+"><a class=3D"table_of_contents-link" href=3D"https://resume.htmd.dev/blog/=
+Use%20Github%20Action%20to%20deploy%20to%20AWS.html#2554f4ec-edfc-4eaa-a31c=
+-cf39bfc094ee">Deploy static website to S3 with Github Action</a></div><div=
+ class=3D"table_of_contents-item table_of_contents-indent-1"><a class=3D"ta=
+ble_of_contents-link" href=3D"https://resume.htmd.dev/blog/Use%20Github%20A=
+ction%20to%20deploy%20to%20AWS.html#ef8a7cea-d45e-453a-8750-2fbdfbeb5ff3">1=
+. Create AWS S3 bucket and enable ACLs</a></div><div class=3D"table_of_cont=
+ents-item table_of_contents-indent-1"><a class=3D"table_of_contents-link" h=
+ref=3D"https://resume.htmd.dev/blog/Use%20Github%20Action%20to%20deploy%20t=
+o%20AWS.html#dbc6beac-9dba-4330-a801-d7ddf7cd8225">2. Create workflow for G=
+ithub action</a></div><div class=3D"table_of_contents-item table_of_content=
+s-indent-1"><a class=3D"table_of_contents-link" href=3D"https://resume.htmd=
+.dev/blog/Use%20Github%20Action%20to%20deploy%20to%20AWS.html#1d24d38a-64d2=
+-49e4-86ff-69173f4e4806">3. Set env secrets</a></div><div class=3D"table_of=
+_contents-item table_of_contents-indent-1"><a class=3D"table_of_contents-li=
+nk" href=3D"https://resume.htmd.dev/blog/Use%20Github%20Action%20to%20deplo=
+y%20to%20AWS.html#5e5b4dfd-77cf-4416-be57-6280c1aee547">4. Push code to Git=
+hub and enjoy the automation</a></div><div class=3D"table_of_contents-item =
+table_of_contents-indent-1"><a class=3D"table_of_contents-link" href=3D"htt=
+ps://resume.htmd.dev/blog/Use%20Github%20Action%20to%20deploy%20to%20AWS.ht=
+ml#dd2ce103-32ae-43cb-a90a-69c9abf60387">5. Access S3 from Cloudfront</a></=
+div><div class=3D"table_of_contents-item table_of_contents-indent-1"><a cla=
+ss=3D"table_of_contents-link" href=3D"https://resume.htmd.dev/blog/Use%20Gi=
+thub%20Action%20to%20deploy%20to%20AWS.html#3a0cd4d2-3223-4de0-9672-68ceea1=
+8503e">6. Do some tricks after deployed</a></div><div class=3D"table_of_con=
+tents-item table_of_contents-indent-2"><a class=3D"table_of_contents-link" =
+href=3D"https://resume.htmd.dev/blog/Use%20Github%20Action%20to%20deploy%20=
+to%20AWS.html#86a10127-165a-4f28-8c70-df6eed8cc21a">a. Create a role for La=
+mbda</a></div><div class=3D"table_of_contents-item table_of_contents-indent=
+-2"><a class=3D"table_of_contents-link" href=3D"https://resume.htmd.dev/blo=
+g/Use%20Github%20Action%20to%20deploy%20to%20AWS.html#15ea9d05-0cb4-4a4e-aa=
+29-e9a36bad79a5">b. Create a SNS topic and subcribe our email to it.</a></d=
+iv><div class=3D"table_of_contents-item table_of_contents-indent-2"><a clas=
+s=3D"table_of_contents-link" href=3D"https://resume.htmd.dev/blog/Use%20Git=
+hub%20Action%20to%20deploy%20to%20AWS.html#10d4f9df-5324-41e5-82f1-49e7805f=
+9596">c. Create a Lambda</a></div><div class=3D"table_of_contents-item tabl=
+e_of_contents-indent-2"><a class=3D"table_of_contents-link" href=3D"https:/=
+/resume.htmd.dev/blog/Use%20Github%20Action%20to%20deploy%20to%20AWS.html#0=
+d7e5416-37a1-4da4-b4b7-f393a0670646">d. Create a trigger from S3 bucket</a>=
+</div><div class=3D"table_of_contents-item table_of_contents-indent-0"><a c=
+lass=3D"table_of_contents-link" href=3D"https://resume.htmd.dev/blog/Use%20=
+Github%20Action%20to%20deploy%20to%20AWS.html#49c3ef4a-4d8b-4fdc-817e-8f253=
+db36861">Deploy backend NextJs application to ECS</a></div><div class=3D"ta=
+ble_of_contents-item table_of_contents-indent-1"><a class=3D"table_of_conte=
+nts-link" href=3D"https://resume.htmd.dev/blog/Use%20Github%20Action%20to%2=
+0deploy%20to%20AWS.html#ab1770fd-952a-4ac3-8c57-b979a9e47111">1. Create sec=
+urity groups</a></div><div class=3D"table_of_contents-item table_of_content=
+s-indent-2"><a class=3D"table_of_contents-link" href=3D"https://resume.htmd=
+.dev/blog/Use%20Github%20Action%20to%20deploy%20to%20AWS.html#7b38abeb-e4dd=
+-4d33-a8bd-82152fe49ae9">a. Create a security group for load balancer</a></=
+div><div class=3D"table_of_contents-item table_of_contents-indent-2"><a cla=
+ss=3D"table_of_contents-link" href=3D"https://resume.htmd.dev/blog/Use%20Gi=
+thub%20Action%20to%20deploy%20to%20AWS.html#18f00dd4-0987-4fdb-9cc9-9ed298a=
+a2baf">b.  Create a security group for ECS container</a></div><div class=3D=
+"table_of_contents-item table_of_contents-indent-1"><a class=3D"table_of_co=
+ntents-link" href=3D"https://resume.htmd.dev/blog/Use%20Github%20Action%20t=
+o%20deploy%20to%20AWS.html#84c6362b-2b17-4c15-8e54-34e049c1357e">2. Create =
+a repository in ECR</a></div><div class=3D"table_of_contents-item table_of_=
+contents-indent-1"><a class=3D"table_of_contents-link" href=3D"https://resu=
+me.htmd.dev/blog/Use%20Github%20Action%20to%20deploy%20to%20AWS.html#f2fb5a=
+c4-3d20-4c51-8c9f-03913d8b3eb9">3. Build &amp; push first image</a></div><d=
+iv class=3D"table_of_contents-item table_of_contents-indent-1"><a class=3D"=
+table_of_contents-link" href=3D"https://resume.htmd.dev/blog/Use%20Github%2=
+0Action%20to%20deploy%20to%20AWS.html#70fbdb8d-331c-4a9b-9322-975b23d8816b"=
+>4. Create task definition</a></div><div class=3D"table_of_contents-item ta=
+ble_of_contents-indent-1"><a class=3D"table_of_contents-link" href=3D"https=
+://resume.htmd.dev/blog/Use%20Github%20Action%20to%20deploy%20to%20AWS.html=
+#5f1b399c-4ea0-49ad-ac09-9e1d81adddc2">5. Create ECS cluster and service us=
+ing Cloudformation</a></div><div class=3D"table_of_contents-item table_of_c=
+ontents-indent-1"><a class=3D"table_of_contents-link" href=3D"https://resum=
+e.htmd.dev/blog/Use%20Github%20Action%20to%20deploy%20to%20AWS.html#a53eb91=
+f-5429-4fe4-a80f-8539801125e1">6. Create workflow for Github Action</a></di=
+v><div class=3D"table_of_contents-item table_of_contents-indent-2"><a class=
+=3D"table_of_contents-link" href=3D"https://resume.htmd.dev/blog/Use%20Gith=
+ub%20Action%20to%20deploy%20to%20AWS.html#3e621bdc-e357-4600-b630-d37a7d848=
+ee2">a. Set env variables that we need for this workflow</a></div><div clas=
+s=3D"table_of_contents-item table_of_contents-indent-2"><a class=3D"table_o=
+f_contents-link" href=3D"https://resume.htmd.dev/blog/Use%20Github%20Action=
+%20to%20deploy%20to%20AWS.html#1296800c-2e7f-460d-89fd-d8a5271393c2">b. Cre=
+ate the workflow file in the source code and push it to Github</a></div></n=
+av><p id=3D"6e7e0253-9c8e-4b5c-8250-ecd9862df2f4" class=3D"">
+</p><h1 id=3D"d4a75cdc-8e30-4b59-b0b7-5366518bb2f2" class=3D"">Overview</h1=
+><p id=3D"76a6f7ac-a693-4eaf-908e-577455fb828a" class=3D"">In this blog, we=
+ will use this infrastructure to do a step-by-step demo.</p><figure id=3D"8=
+b8e3443-ef5c-40a3-8503-aa5bbd9389dd" class=3D"image"><a href=3D"https://sak=
+ai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/ref=
+er/EcsPipeline_files/system.drawio.png"><img style=3D"width:1161px" src=3D"=
+https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111=
+109e1cc/refer/EcsPipeline_files/system.drawio.png"></a></figure><p id=3D"1d=
+46b35b-1641-47d7-b5d5-77d9db128330" class=3D"">
+</p><h1 id=3D"d41b9397-1fec-4ee7-bf28-3ccb1c52d0a5" class=3D""><strong>Prer=
+equisite</strong></h1><ul id=3D"98b10789-4326-4a6d-8667-1821e4d25ec4" class=
+=3D"bulleted-list"><li style=3D"list-style-type:disc">IAM credentials (AWS =
+access key ID, AWS Secret access key, region name)</li></ul><ul id=3D"fb0ec=
+7e5-ca7b-4fa2-8d52-bcb54fffc1bf" class=3D"bulleted-list"><li style=3D"list-=
+style-type:disc">Github repositories</li></ul><ul id=3D"cc34de47-46ea-439b-=
+955f-cddf3ea448e0" class=3D"bulleted-list"><li style=3D"list-style-type:dis=
+c">Docker </li></ul><ul id=3D"3c97f07b-e02d-4bda-9bfa-fe66e6b881fe" class=
+=3D"bulleted-list"><li style=3D"list-style-type:disc">NodeJs (yarn)</li></u=
+l><h1 id=3D"2554f4ec-edfc-4eaa-a31c-cf39bfc094ee" class=3D"">Deploy static =
+website to S3 with Github Action</h1><figure id=3D"96d034d3-273e-47fe-8e33-=
+272c09b01cbb" class=3D"image"><a href=3D"https://sakai.cs.miu.edu/access/co=
+ntent/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Un=
+titled_Diagram.drawio_(1).png"><img style=3D"width:1161px" src=3D"https://s=
+akai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/r=
+efer/EcsPipeline_files/Untitled_Diagram.drawio_(1).png"></a></figure><h2 id=
+=3D"ef8a7cea-d45e-453a-8750-2fbdfbeb5ff3" class=3D"">1. Create AWS S3 bucke=
+t and enable ACLs</h2><figure id=3D"0bf3e46d-bfbf-4283-9f5e-2b327a88c78f" c=
+lass=3D"image"><a href=3D"https://sakai.cs.miu.edu/access/content/group/5ac=
+d88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-0=
+2-07_at_3.17.06_PM.png"><img style=3D"width:2390px" src=3D"https://sakai.cs=
+.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/Ec=
+sPipeline_files/Screenshot_2023-02-07_at_3.17.06_PM.png"></a></figure><ul i=
+d=3D"4316101e-6957-4476-8041-ea437c44a448" class=3D"bulleted-list"><li styl=
+e=3D"list-style-type:disc">Enable public access</li></ul><figure id=3D"7ce8=
+04e4-8730-42d0-b71d-8cd3040f467e" class=3D"image"><a href=3D"https://sakai.=
+cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/=
+EcsPipeline_files/Screenshot_2023-02-07_at_10.01.13_PM.png"><img style=3D"w=
+idth:1588px" src=3D"https://sakai.cs.miu.edu/access/content/group/5acd88a5-=
+8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-07_a=
+t_10.01.13_PM.png"></a></figure><h2 id=3D"dbc6beac-9dba-4330-a801-d7ddf7cd8=
+225" class=3D"">2. Create workflow for Github action</h2><p id=3D"768942ca-=
+be40-4196-8ad1-9d0eb97fe006" class=3D"">In this demo, we are deploying an R=
+eactJs app. Let=E2=80=99s explain some steps to build this app:</p><ul id=
+=3D"03940abc-e681-487e-a168-f888bd19a532" class=3D"bulleted-list"><li style=
+=3D"list-style-type:disc">Run <code>yarn install</code> to install all depe=
+ndencies.</li></ul><ul id=3D"52b081fa-e76a-4c25-813a-38c8613aaf74" class=3D=
+"bulleted-list"><li style=3D"list-style-type:disc">Run <code>yarn build</co=
+de> to build the app. The content of output folder will be pushed to S3. In=
+ my case, the output folder is <code>dist</code>.</li></ul><p id=3D"2cd63a1=
+f-bc77-4ddd-995e-0d6b6f6adaf7" class=3D"">Create a workflow file inside the=
+ repository <code>.github/workflows/deploy.yml</code></p><figure id=3D"b0d3=
+6155-5852-43ce-8228-a15326913ae1" class=3D"image"><a href=3D"https://sakai.=
+cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/=
+EcsPipeline_files/Screenshot_2023-02-07_at_3.38.21_PM.png"><img style=3D"wi=
+dth:1842px" src=3D"https://sakai.cs.miu.edu/access/content/group/5acd88a5-8=
+696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-07_at=
+_3.38.21_PM.png"></a></figure><pre id=3D"42f4036a-ccc0-438f-8846-8df76782ee=
+70" class=3D"code"><code>name: Production Build
+on:
+  pull_request:
+  push:
+    branches:
+      - main # the branch and action we want to trigger this workflow
+jobs:
+  build:
+    runs-on: ubuntu-latest # We use Uubuntu to run this workflow on
+   =20
+    strategy:
+      matrix:
+        node-version: [ 16.x ] # Set NodeJs version here
+    steps:
+    - uses: actions/checkout@v3 # Check out the repo
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3 # Install NodeJs in this Ubuntu
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Yarn Install # Run command to install all dependencies
+      run: |
+        yarn install
+    - name: Production Build # Build the file, the output folder in this ca=
+se is dist
+      run: |
+        yarn build
+    - name: Deploy to S3
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --delete
+      env: # All the keys we need from AWS will be passed into this action
+        AWS_S3_BUCKET: ${{ secrets.AWS_PRODUCTION_BUCKET_NAME }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+        SOURCE_DIR: "dist" # The output folder of build step above (it depe=
+nds on your app)</code></pre><h2 id=3D"1d24d38a-64d2-49e4-86ff-69173f4e4806=
+" class=3D"">3. Set env secrets</h2><p id=3D"9d5676b0-cf6a-4c10-9955-e4e610=
+7a3445" class=3D"">As you can see, we use four secret keys in above workflo=
+w. We need to define it in our repository=E2=80=99s setting and give it a v=
+alue.</p><figure id=3D"b9fada8f-f91c-46c1-a5e4-54f68f65cf1f" class=3D"image=
+"><a href=3D"https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-45=
+60-862c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-07_at_3.44.=
+48_PM.png"><img style=3D"width:2412px" src=3D"https://sakai.cs.miu.edu/acce=
+ss/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_fil=
+es/Screenshot_2023-02-07_at_3.44.48_PM.png"></a></figure><h2 id=3D"5e5b4dfd=
+-77cf-4416-be57-6280c1aee547" class=3D"">4. Push code to Github and enjoy t=
+he automation</h2><p id=3D"45b02055-5f74-4aaf-9c19-646538eb46b5" class=3D""=
+>Github Action will automatically trigger this workflow when we push this w=
+orkflow definition along with the code to the repo</p><div id=3D"2e15d0bf-1=
+e6c-4f8c-beba-3204ddf1c939" class=3D"column-list"><div id=3D"7b400cbc-938c-=
+4e52-bb39-6d14134d2f82" style=3D"width:50%" class=3D"column"><figure id=3D"=
+a0d3175e-df00-4b0a-9b07-2e44dbf17902" class=3D"image"><a href=3D"https://sa=
+kai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/re=
+fer/EcsPipeline_files/Screenshot_2023-02-07_at_3.48.54_PM.png"><img style=
+=3D"width:2814px" src=3D"https://sakai.cs.miu.edu/access/content/group/5acd=
+88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02=
+-07_at_3.48.54_PM.png"></a></figure></div><div id=3D"95964693-6313-468d-9d6=
+1-731b1fb89720" style=3D"width:50%" class=3D"column"><figure id=3D"fae7df48=
+-5485-466e-a4d4-76450e908927" class=3D"image"><a href=3D"https://sakai.cs.m=
+iu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsP=
+ipeline_files/Screenshot_2023-02-07_at_3.53.59_PM.png"><img style=3D"width:=
+2132px" src=3D"https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-=
+4560-862c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-07_at_3.5=
+3.59_PM.png"></a></figure></div></div><blockquote id=3D"fe944fec-25ec-41c1-=
+b3eb-a901e3014f51" class=3D"">To learn more about Github Action, you could =
+go to this link to find an action that fits your need <a href=3D"https://gi=
+thub.com/marketplace?type=3Dactions&amp;query=3Ds3+">https://github.com/mar=
+ketplace?type=3Dactions&amp;query=3Ds3+</a> </blockquote><h2 id=3D"dd2ce103=
+-32ae-43cb-a90a-69c9abf60387" class=3D"">5. Access S3 from Cloudfront</h2><=
+p id=3D"0db0202f-359e-402c-8db6-93187dfa6b9a" class=3D"">Create a new distr=
+ibution on Cloudfron to serve files from the S3 bucket. Now we can access o=
+ur app publicly through Cloudfront.</p><div id=3D"2b071a6d-e9fa-41b1-bfbf-8=
+0f9c4d419af" class=3D"column-list"><div id=3D"69ba8e76-3726-4d2b-97bd-0e60d=
+1dcd14d" style=3D"width:50%" class=3D"column"><figure id=3D"31a0ade8-289e-4=
+e88-abef-af0f2d39c571" class=3D"image"><a href=3D"https://sakai.cs.miu.edu/=
+access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline=
+_files/Screenshot_2023-02-07_at_10.04.39_PM.png"><img style=3D"width:2018px=
+" src=3D"https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-8=
+62c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-07_at_10.04.39_=
+PM.png"></a></figure></div><div id=3D"ae278e1d-b76c-4211-92b0-adaadf0e8342"=
+ style=3D"width:50%" class=3D"column"><figure id=3D"ae54c461-9191-49b3-87b7=
+-a132045871a3" class=3D"image"><a href=3D"https://sakai.cs.miu.edu/access/c=
+ontent/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/S=
+creenshot_2023-02-07_at_10.05.14_PM.png"><img style=3D"width:2082px" src=3D=
+"https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f911=
+1109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-07_at_10.05.14_PM.png">=
+</a></figure></div></div><h2 id=3D"3a0cd4d2-3223-4de0-9672-68ceea18503e" cl=
+ass=3D"">6. Do some tricks after deployed</h2><ul id=3D"f4840a59-6de6-4dc8-=
+8a13-834770c66005" class=3D"bulleted-list"><li style=3D"list-style-type:dis=
+c">There is a problem each time we deploy the app, which is cached files on=
+ Cloudfront, so we won=E2=80=99t see new changes on the website because the=
+ cached files are valid within 24 hours. That is why we want to create inva=
+lidation after each deployment. The below code shows a function to do it.</=
+li></ul><ul id=3D"ae250ee8-89e4-443d-ba25-e72f065b4bbe" class=3D"bulleted-l=
+ist"><li style=3D"list-style-type:disc">We also want to know when is the de=
+ployment finished. In this case, we will use SNS to send an email to our in=
+box to inform the deployment is finished and ready for production.</li></ul=
+><p id=3D"66571ba6-053f-497a-9a88-d5cd30be8c36" class=3D"">
+</p><h3 id=3D"86a10127-165a-4f28-8c70-df6eed8cc21a" class=3D"">a. Create a =
+role for Lambda</h3><p id=3D"b4f104e2-3782-417f-ac3b-c27cd9e10528" class=3D=
+"">Create a role for this Lambda that are enabled to publish message to SNS=
+ and create Cloudfront invalidation</p><figure id=3D"efd6a6f0-2cf7-46e6-9ed=
+7-ffd6d52b046c" class=3D"image"><a href=3D"https://sakai.cs.miu.edu/access/=
+content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/=
+Screenshot_2023-02-07_at_10.17.40_PM.png"><img style=3D"width:2654px" src=
+=3D"https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f=
+9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-07_at_10.17.40_PM.pn=
+g"></a></figure><h3 id=3D"15ea9d05-0cb4-4a4e-aa29-e9a36bad79a5" class=3D"">=
+b. Create a SNS topic and subcribe our email to it.</h3><h3 id=3D"10d4f9df-=
+5324-41e5-82f1-49e7805f9596" class=3D"">c. Create a Lambda</h3><p id=3D"105=
+a69ec-6c99-41dc-9093-a8f748d09738" class=3D"">Create a Lambda NodeJs 18 and=
+ assign above role to it. </p><p id=3D"2ea0d65b-e610-4066-bb4b-2fe4df637919=
+" class=3D"">Fill out <code>YOUR_REGION</code>, <code>YOUR_TOPIC_ARN</code>=
+, and <code>YOUR_DISTRIBUTION_ID</code>.</p><pre id=3D"897229f6-fe30-48f4-a=
+f13-7514fe451608" class=3D"code"><code>import { SNSClient, PublishCommand }=
+ from "@aws-sdk/client-sns";
+import { CloudFrontClient, CreateInvalidationCommand } from "@aws-sdk/clien=
+t-cloudfront";
+
+const YOUR_REGION =3D 'YOUR_REGION';
+const YOUR_TOPIC_ARN =3D 'YOUR_TOPIC_ARN';
+const YOUR_DISTRIBUTION_ID =3D 'YOUR_DISTRIBUTION_ID';
+
+
+const sendNotiToEmail =3D async () =3D&gt; {
+    const client =3D new SNSClient({ region: YOUR_REGION });
+    const params =3D {
+        Message: `New version deployed at ${new Date(Date.now()).toLocaleSt=
+ring("en-US", { timeZone: "America/Chicago" })}`,
+        TopicArn: YOUR_TOPIC_ARN
+    };
+    const command =3D new PublishCommand(params);
+    const response =3D await client.send(command);
+    return response;
+}
+
+const clearCloudFrontCache =3D async () =3D&gt; {
+    const client =3D new CloudFrontClient({ region: YOUR_REGION });
+    const command =3D new CreateInvalidationCommand({
+        DistributionId: YOUR_DISTRIBUTION_ID,
+        InvalidationBatch: {
+            CallerReference: new Date().getTime().toString(),
+            Paths: {
+                Quantity: 1,
+                Items: ['/*'] // Clear all cached files
+            }
+        }
+    });
+    return client.send(command);
+}
+
+export const handler =3D async (event) =3D&gt; {
+
+    await sendNotiToEmail();
+    await clearCloudFrontCache();
+    return {
+        statusCode: 200,
+        body: "Done"
+    }
+};</code></pre><h3 id=3D"0d7e5416-37a1-4da4-b4b7-f393a0670646" class=3D"">d=
+. Create a trigger from S3 bucket</h3><p id=3D"7cadf967-2d43-46e9-a7a5-aa5d=
+f2a1519c" class=3D"">Create a trigger from S3 bucket when <code>index.html<=
+/code> has an update to run this lambda function after deployed</p><figure =
+id=3D"be01be26-f17e-44b9-b8bc-b94df8cb392a" class=3D"image"><a href=3D"http=
+s://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e=
+1cc/refer/EcsPipeline_files/Screenshot_2023-02-07_at_10.28.37_PM.png"><img =
+style=3D"width:1978px" src=3D"https://sakai.cs.miu.edu/access/content/group=
+/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_20=
+23-02-07_at_10.28.37_PM.png"></a></figure><p id=3D"8e6c2ac4-77b4-4ef4-b893-=
+c01631fe9537" class=3D"">
+</p><hr id=3D"71466448-9b2b-438e-b3ba-f00f22c86cef"><p id=3D"57ea2513-aa5d-=
+429b-bfae-626a5089d1b5" class=3D"">
+</p><h1 id=3D"49c3ef4a-4d8b-4fdc-817e-8f253db36861" class=3D"">Deploy backe=
+nd NextJs application to ECS</h1><figure id=3D"faec4556-f433-4ff3-a03d-314f=
+a7cc0580" class=3D"image"><a href=3D"https://sakai.cs.miu.edu/access/conten=
+t/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Untitl=
+ed_Diagram.drawio_(2).png"><img style=3D"width:1161px" src=3D"https://sakai=
+.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer=
+/EcsPipeline_files/Untitled_Diagram.drawio_(2).png"></a></figure><h2 id=3D"=
+ab1770fd-952a-4ac3-8c57-b979a9e47111" class=3D"">1. Create security groups<=
+/h2><h3 id=3D"7b38abeb-e4dd-4d33-a8bd-82152fe49ae9" class=3D"">a. Create a =
+security group for load balancer</h3><p id=3D"e701f501-17d8-4b47-816a-ea0f8=
+f491829" class=3D"">Allow all access from the internet (<code>MyLoadBalance=
+rSg</code>)</p><figure id=3D"a09c1bae-8f35-46e8-ae03-36d968c78e20" class=3D=
+"image"><a href=3D"https://sakai.cs.miu.edu/access/content/group/5acd88a5-8=
+696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-07_at=
+_10.55.25_PM.png"><img style=3D"width:2624px" src=3D"https://sakai.cs.miu.e=
+du/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipel=
+ine_files/Screenshot_2023-02-07_at_10.55.25_PM.png"></a></figure><h3 id=3D"=
+18f00dd4-0987-4fdb-9cc9-9ed298aa2baf" class=3D"">b.  Create a security grou=
+p for ECS container</h3><p id=3D"2ea761f4-ace0-4290-af51-ef7a7148377d" clas=
+s=3D"">Only allow access from <code>MyLoadBalancerSg</code></p><figure id=
+=3D"55765ba5-67f3-47dd-a487-d6fe6a20d4d5" class=3D"image"><a href=3D"https:=
+//sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1c=
+c/refer/EcsPipeline_files/Screenshot_2023-02-08_at_1.02.43_PM.png"><img sty=
+le=3D"width:2678px" src=3D"https://sakai.cs.miu.edu/access/content/group/5a=
+cd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-=
+02-08_at_1.02.43_PM.png"></a></figure><p id=3D"c43ecbc8-89d5-49da-9419-3afa=
+7aebb20c" class=3D"">
+</p><h2 id=3D"84c6362b-2b17-4c15-8e54-34e049c1357e" class=3D"">2. Create a =
+repository in ECR</h2><figure id=3D"638b1135-bcd7-4f8f-83a3-841b18ca3d1d" c=
+lass=3D"image"><a href=3D"https://sakai.cs.miu.edu/access/content/group/5ac=
+d88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-0=
+2-07_at_11.00.26_PM.png"><img style=3D"width:2350px" src=3D"https://sakai.c=
+s.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/E=
+csPipeline_files/Screenshot_2023-02-07_at_11.00.26_PM.png"></a></figure><h2=
+ id=3D"f2fb5ac4-3d20-4c51-8c9f-03913d8b3eb9" class=3D"">3. Build &amp; push=
+ first image</h2><p id=3D"cc462eba-c00c-418b-b351-dae9f3f7df33" class=3D"">=
+We will dockerize our NextJs application and push it to ECR repository.</p>=
+<ul id=3D"11dd9d32-5d67-4f41-b42a-a48b244422bb" class=3D"bulleted-list"><li=
+ style=3D"list-style-type:disc">Create a file <code>Dockerfile</code> insid=
+e our code base</li></ul><pre id=3D"69b1abc7-55f0-416f-abf9-44bb0ed68797" c=
+lass=3D"code"><code># Use an official Node.js image as the base image
+FROM node:16-alpine
+
+# Set the working directory in the image to /app
+WORKDIR /app
+
+# Copy the rest of the application code to the image
+COPY . .
+
+# Install the application dependencies
+RUN yarn install
+# Build nextjs application, output folder is .next
+RUN yarn build
+
+# Specify the command to start the Next.js application
+CMD ["npm", "run", "start"]
+EXPOSE 3000</code></pre><ul id=3D"7bc8f6f3-06a0-427a-97f0-fe619bca0342" cla=
+ss=3D"bulleted-list"><li style=3D"list-style-type:disc">In our ECR reposito=
+ry, click on <code>View push commands</code> then follow these steps to pus=
+h our first image to this repo</li></ul><figure id=3D"9c6dc0bf-e83b-4ca4-99=
+be-f054d9c97a05" class=3D"image"><a href=3D"https://sakai.cs.miu.edu/access=
+/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files=
+/Screenshot_2023-02-08_at_12.56.30_PM.png"><img style=3D"width:2112px" src=
+=3D"https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f=
+9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-08_at_12.56.30_PM.pn=
+g"></a></figure><h2 id=3D"70fbdb8d-331c-4a9b-9322-975b23d8816b" class=3D"">=
+4. Create task definition</h2><ul id=3D"ff3f7937-6143-4a22-a270-22de53f4520=
+f" class=3D"bulleted-list"><li style=3D"list-style-type:disc">Go to ECS, cl=
+ick on Task Definition, and click on Create Task Definition</li></ul><ul id=
+=3D"9c500fb7-b4a2-4094-a470-0f87df97ae08" class=3D"bulleted-list"><li style=
+=3D"list-style-type:disc">Create a task definition using the URI from above=
+ ECR (e.g: <code><a href=3D"http://856210122328.drecr.us-east-1.amazonaws.c=
+om/mywebiste-be:latest">http://856210122328.drecr.us-east-1.amazonaws.com/m=
+ywebiste-be:latest</a></code>)</li></ul><ul id=3D"a686f6d7-451d-4e17-b6bf-6=
+2e959fcc0b7" class=3D"bulleted-list"><li style=3D"list-style-type:disc">Map=
+ the port we want to expose from containers. In this case, NextJs=E2=80=99 =
+port is 3000</li></ul><ul id=3D"e1e75dbe-2659-4f19-9ba8-00b877fab70d" class=
+=3D"bulleted-list"><li style=3D"list-style-type:disc">Pass env variables as=
+ your wish to containers</li></ul><p id=3D"346b6096-7366-4896-b328-368cffae=
+37d3" class=3D"">
+</p><figure id=3D"491201ab-bd08-4a92-a527-3a0390413cb4" class=3D"image"><a =
+href=3D"https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-86=
+2c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-07_at_11.10.42_P=
+M.png"><img style=3D"width:2162px" src=3D"https://sakai.cs.miu.edu/access/c=
+ontent/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/S=
+creenshot_2023-02-07_at_11.10.42_PM.png"></a></figure><p id=3D"b94c8aae-10a=
+6-4edd-8b62-df3c97e798e2" class=3D"">
+</p><h2 id=3D"5f1b399c-4ea0-49ad-ac09-9e1d81adddc2" class=3D"">5. Create EC=
+S cluster and service using Cloudformation</h2><p id=3D"3d9f0ab9-d93f-4c52-=
+bc7c-4a8f45663800" class=3D"">We will use this Cloudformation template to c=
+reate the rest of the service. We can still do it manually on the UI but wh=
+en we create an ECS service inside the ECS cluster, there is a glitch that =
+makes the Load Balancer section disappear so we cannot create a load balanc=
+er along with our ECS service. By doing it, Cloudformation will make sure w=
+e always have a load balancer when creating a ECS service.</p><ul id=3D"502=
+91cae-d1b1-45ae-82bd-6b7b49b5b0f1" class=3D"bulleted-list"><li style=3D"lis=
+t-style-type:disc">Create a yaml file for this template (e.g: <code>myecsst=
+ack.yml</code>)</li></ul><ul id=3D"3486eb4f-6c0f-4b81-8418-c03e35b8038d" cl=
+ass=3D"bulleted-list"><li style=3D"list-style-type:disc">Replace all the pa=
+rameters in the template</li></ul><pre id=3D"3a4e0689-d1c9-4f90-bedb-fd619b=
+eff9ab" class=3D"code"><code>AWSTemplateFormatVersion: 2010-09-09
+Description: The template used to create an ECS Service from the ECS Consol=
+e.
+Parameters:
+    # (REPLACE THIS) Enter the security group IDs for the load balancer and=
+ the container that were created in the previous step.
+    LoadBalancerSecurityGroup:
+        Type: CommaDelimitedList
+        Default: sg-04e9e5c992ae5d43c
+    ContainerSecurityGroup:
+        Type: CommaDelimitedList
+        Default: sg-011d187169c541958
+    # (REPLACE THIS) Enter the subnet IDs for the VPC where the load balanc=
+er and the container will be created.
+    SubnetIDs:
+        Type: CommaDelimitedList
+        Default: &gt;-
+            subnet-0f1cffba22f6b4742,subnet-01a6bb4ca617d76e6,subnet-066dd3=
+cb1343aa92d,subnet-06431437c9d252d83,subnet-05ece4ddfab51758e,subnet-0d7191=
+36bbfff4870
+    VpcID:
+        Type: String
+        Default: vpc-04b4663f76ce16dd8
+		# (REPLACE THIS) Create a new role with `AmazonECSTaskExecutionRolePolicy=
+` and enter its arn here
+    TaskRole:
+        Type: String
+        Default: arn:aws:iam::856210122328:role/ecsTaskExecutionRole
+		# (REPLACE THIS) Enter the task definition's arn that we created from abo=
+ve step
+		TaskDefinitionArn:
+        Type: String
+        Default: arn:aws:ecs:us-east-1:856210122328:task-definition/mywebsi=
+te:1
+    # Choose whatever you want for below parameters
+    ECSClusterName:
+        Type: String
+        Default: mywebsite-cluster
+    LoadBalancerName:
+        Type: String
+        Default: MyLoadBalancerECS
+    ServiceName:
+        Type: String
+        Default: mywebsite-service
+    ContainerName:
+        Type: String
+        Default: mywebsite
+    ContainerPort:
+        Type: Number
+        Default: 3000 # matching with the exposed port from docker
+    TargetGroupName:
+        Type: String
+        Default: MyTargetGroupECS
+Resources:
+    ECSCluster:
+        Type: 'AWS::ECS::Cluster'
+        Properties:
+            ClusterName: !Ref ECSClusterName
+    ECSService:
+        Type: 'AWS::ECS::Service'
+        Properties:
+            Cluster: !Ref ECSClusterName
+            CapacityProviderStrategy:
+                - CapacityProvider: FARGATE
+                  Base: 0
+                  Weight: 1
+            TaskDefinition: !Ref TaskDefinitionArn
+            ServiceName: !Ref ServiceName
+            SchedulingStrategy: REPLICA
+            DesiredCount: 1
+            LoadBalancers:
+                - ContainerName: !Ref ContainerName
+                  ContainerPort: !Ref ContainerPort
+                  LoadBalancerName: !Ref 'AWS::NoValue'
+                  TargetGroupArn: !Ref TargetGroup
+            NetworkConfiguration:
+                AwsvpcConfiguration:
+                    AssignPublicIp: ENABLED
+                    SecurityGroups: !Ref ContainerSecurityGroup
+                    Subnets: !Ref SubnetIDs
+            PlatformVersion: LATEST
+            DeploymentConfiguration:
+                MaximumPercent: 200
+                MinimumHealthyPercent: 100
+                DeploymentCircuitBreaker:
+                    Enable: true
+                    Rollback: true
+            DeploymentController:
+                Type: ECS
+            ServiceConnectConfiguration:
+                Enabled: false
+            Tags:
+                - Key: 'ecs:service:stackId'
+                  Value: !Ref 'AWS::StackId'
+            EnableECSManagedTags: true
+        DependsOn:
+            - Listener
+    LoadBalancer:
+        Type: 'AWS::ElasticLoadBalancingV2::LoadBalancer'
+        Properties:
+            Type: application
+            Name: !Ref LoadBalancerName
+            SecurityGroups: !Ref LoadBalancerSecurityGroup
+            Subnets: !Ref SubnetIDs
+    TargetGroup:
+        Type: 'AWS::ElasticLoadBalancingV2::TargetGroup'
+        Properties:
+            HealthCheckPath: /
+            Name: !Ref TargetGroupName
+            Port: !Ref ContainerPort
+            Protocol: HTTP
+            TargetType: ip
+            HealthCheckProtocol: HTTP
+            VpcId: !Ref VpcID
+    Listener:
+        Type: 'AWS::ElasticLoadBalancingV2::Listener'
+        Properties:
+            DefaultActions:
+                - Type: forward
+                  TargetGroupArn: !Ref TargetGroup
+            LoadBalancerArn: !Ref LoadBalancer
+            Port: 80
+            Protocol: HTTP</code></pre><p id=3D"0560f484-bf17-418f-941b-d9b=
+a871e8aac" class=3D"">
+</p><ul id=3D"8159f59c-361a-4bd1-b588-ff31e92fcd33" class=3D"bulleted-list"=
+><li style=3D"list-style-type:disc">After done with the template, go to Clo=
+udformation and upload this file to create these services.</li></ul><ul id=
+=3D"464ed27f-e191-4703-9dd7-72dd1a203ce6" class=3D"bulleted-list"><li style=
+=3D"list-style-type:disc">Check if the load balancer is working as expected=
+</li></ul><h2 id=3D"a53eb91f-5429-4fe4-a80f-8539801125e1" class=3D"">6. Cre=
+ate workflow for Github Action</h2><p id=3D"4eab1eda-005e-4e0a-be55-3e8e5bd=
+660d1" class=3D"">There is an official workflow to deploy AWS ECS on Github=
+. You could go to your repository Click on <code>Actions</code> \ <code>New=
+ workflow</code> , and search for <code>ecs</code></p><p id=3D"731239b6-c67=
+4-4313-b6b3-fd3407560992" class=3D"">
+</p><figure id=3D"c73a9d8e-d5b7-4011-8098-face10e6e64a" class=3D"image"><a =
+href=3D"https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-86=
+2c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-08_at_1.25.16_PM=
+.png"><img style=3D"width:2166px" src=3D"https://sakai.cs.miu.edu/access/co=
+ntent/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Sc=
+reenshot_2023-02-08_at_1.25.16_PM.png"></a></figure><p id=3D"da24db3c-401c-=
+478a-a34d-e6bafdb7ed12" class=3D"">But, in this guideline, we will customiz=
+e the official workflow a little bit. </p><ul id=3D"65b259e6-a546-42d9-adb3=
+-675d16de688d" class=3D"bulleted-list"><li style=3D"list-style-type:disc">W=
+e will download task definition and export it to a json file instead of pro=
+viding a preset task definition json in our repo.</li></ul><ul id=3D"41969d=
+29-5d67-4f7b-a92d-f590969e6b4f" class=3D"bulleted-list"><li style=3D"list-s=
+tyle-type:disc">Add a last step to send email to our inbox after everything=
+ is done <code>Notify SNS</code> using the same SNS topic that we created f=
+rom previous section so we know when everything is done.</li></ul><pre id=
+=3D"15262fd4-f471-44d2-a276-811284b66405" class=3D"code"><code>
+name: Deploy to Amazon ECS
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  AWS_REGION: ${{ secrets.AWS_REGION }}             # set this to your pref=
+erred AWS region, e.g. us-west-1
+  ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}   # set this to your Amazon=
+ ECR repository name
+  ECS_SERVICE: ${{secrets.ECS_SERVICE}}                 # set this to your =
+Amazon ECS service name
+  ECS_CLUSTER: ${{secrets.ECS_CLUSTER}}                 # set this to your =
+Amazon ECS cluster name
+  CONTAINER_NAME: ${{secrets.CONTAINER_NAME}}          # set this to the na=
+me of the container in the
+  ECS_TASK_DEFINITION_NAME: ${{secrets.ECS_TASK_DEFINITION_NAME}}
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: Download task definition
+      run: |
+        aws ecs describe-task-definition --task-definition "${{secrets.ECS_=
+TASK_DEFINITION_NAME}}" --query taskDefinition &gt; task-definition.json
+
+    - name: Build, tag, and push image to Amazon ECR
+      id: build-image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        # Build a docker container and
+        # push it to ECR so that it can
+        # be deployed to ECS.
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        echo "image=3D$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" &gt;&gt; $G=
+ITHUB_OUTPUT
+
+    - name: Fill in the new image ID in the Amazon ECS task definition
+      id: task-def
+      uses: aws-actions/amazon-ecs-render-task-definition@v1
+      with:
+        task-definition: task-definition.json
+        container-name: ${{ env.CONTAINER_NAME }}
+        image: ${{ steps.build-image.outputs.image }}
+
+    - name: Deploy Amazon ECS task definition
+      uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+      with:
+        task-definition: ${{ steps.task-def.outputs.task-definition }}
+        service: ${{ env.ECS_SERVICE }}
+        cluster: ${{ env.ECS_CLUSTER }}
+        wait-for-service-stability: true
+   =20
+    - name: Notify SNS
+      run: |
+        aws sns publish --topic-arn "${{secrets.SNS_ARN}}" --message "New B=
+ackend Deployment at $(date +%c)"</code></pre><h3 id=3D"3e621bdc-e357-4600-=
+b630-d37a7d848ee2" class=3D"">a. Set env variables that we need for this wo=
+rkflow</h3><ul id=3D"28075921-b9e8-466c-a60d-f10d8f4987a6" class=3D"bullete=
+d-list"><li style=3D"list-style-type:disc">AWS_REGION</li></ul><ul id=3D"1d=
+234a2a-f06a-4510-8ff3-fcc86e652ebd" class=3D"bulleted-list"><li style=3D"li=
+st-style-type:disc">ECR_REPOSITORY</li></ul><ul id=3D"675f804d-7207-498f-89=
+94-0aa7585701e9" class=3D"bulleted-list"><li style=3D"list-style-type:disc"=
+>ECS_SERVICE</li></ul><ul id=3D"65decc77-e0a1-45c8-b8c8-2e93c62bf9b5" class=
+=3D"bulleted-list"><li style=3D"list-style-type:disc">ECS_CLUSTER</li></ul>=
+<ul id=3D"7014af6e-e554-4355-87f0-07d2bbd16c92" class=3D"bulleted-list"><li=
+ style=3D"list-style-type:disc">CONTAINER_NAME</li></ul><ul id=3D"5c78dcbe-=
+1527-4f3a-a4ba-fc236a5ad2cc" class=3D"bulleted-list"><li style=3D"list-styl=
+e-type:disc">ECS_TASK_DEFINITION_NAME</li></ul><ul id=3D"9ce34aad-2697-4cba=
+-aade-7f9345e2de70" class=3D"bulleted-list"><li style=3D"list-style-type:di=
+sc">AWS_ACCESS_KEY_ID</li></ul><ul id=3D"7594205f-c47f-41c1-b01c-a2ea700805=
+c1" class=3D"bulleted-list"><li style=3D"list-style-type:disc">AWS_SECRET_A=
+CCESS_KEY</li></ul><ul id=3D"686d7e62-3724-4d9b-be1d-e0b5c8e80030" class=3D=
+"bulleted-list"><li style=3D"list-style-type:disc">SNS_ARN</li></ul><figure=
+ id=3D"00ea06ac-11f4-434d-9be1-e46fcf67c004" class=3D"image"><a href=3D"htt=
+ps://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109=
+e1cc/refer/EcsPipeline_files/Screenshot_2023-02-08_at_1.38.14_PM.png"><img =
+style=3D"width:2270px" src=3D"https://sakai.cs.miu.edu/access/content/group=
+/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_20=
+23-02-08_at_1.38.14_PM.png"></a></figure><h3 id=3D"1296800c-2e7f-460d-89fd-=
+d8a5271393c2" class=3D"">b. Create the workflow file in the source code and=
+ push it to Github</h3><p id=3D"9e1448b1-0f1e-4111-a5b5-253b9406dbf1" class=
+=3D"">
+</p><figure id=3D"6ff0162f-afc7-4727-98cb-aaf5c6214291" class=3D"image"><a =
+href=3D"https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-4560-86=
+2c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-08_at_1.46.15_PM=
+.png"><img style=3D"width:921px" src=3D"https://sakai.cs.miu.edu/access/con=
+tent/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPipeline_files/Scr=
+eenshot_2023-02-08_at_1.46.15_PM.png"></a></figure><figure id=3D"5847c552-6=
+689-4b32-b439-f141523d4791" class=3D"image"><a href=3D"https://sakai.cs.miu=
+.edu/access/content/group/5acd88a5-8696-4560-862c-f9111109e1cc/refer/EcsPip=
+eline_files/Screenshot_2023-02-08_at_1.38.55_PM.png"><img style=3D"width:28=
+04px" src=3D"https://sakai.cs.miu.edu/access/content/group/5acd88a5-8696-45=
+60-862c-f9111109e1cc/refer/EcsPipeline_files/Screenshot_2023-02-08_at_1.38.=
+55_PM.png"></a></figure><p id=3D"76b09903-cca7-423e-a37b-180604468568" clas=
+s=3D"">
+</p><p id=3D"4c0e6b2f-25aa-4ff2-ad11-6d2dfce0a520" class=3D"">Finally, a ne=
+w task definition will be deployed in the ECS service and replace the previ=
+ous version. Its private IP will be automatically registered to the target =
+group that we created along with the load balancer and ECS service.</p><p i=
+d=3D"3d5423d9-f6db-4c8c-9717-64d03aa6f477" class=3D"">There is something yo=
+u can do to optimize this workflow:</p><ul id=3D"3a6c6f9c-1bce-4b4d-9d59-d5=
+7f570e67a3" class=3D"bulleted-list"><li style=3D"list-style-type:disc">Redu=
+ce the size of the docker image</li></ul><ul id=3D"7ceaec77-66fa-45ee-84e5-=
+8dbc5373dab0" class=3D"bulleted-list"><li style=3D"list-style-type:disc">Cl=
+ean up the unused images in ECR because it will cost us a lot</li></ul><p i=
+d=3D"98292618-e664-41f0-b28b-14d2d70de706" class=3D"">
+</p></div></article><grammarly-desktop-integration data-grammarly-shadow-ro=
+ot=3D"true"></grammarly-desktop-integration></body></html>
+------MultipartBoundary--RmK1zNTmaVWeJ7F1ol0HF6upKAOWg7O7xDArGusHI8----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-fc8a6b16-574a-4830-b0bd-29aa8c9d3a9a@mhtml.blink
+
+@charset "utf-8";
+
+html { -webkit-print-color-adjust: exact; }
+
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; }
+
+html, body { margin: 0px; padding: 0px; }
+
+@media only screen {
+  body { margin: 2em auto; max-width: 900px; color: rgb(55, 53, 47); }
+}
+
+body { line-height: 1.5; white-space: pre-wrap; }
+
+a, a.visited { color: inherit; text-decoration: underline; }
+
+.pdf-relative-link-path { font-size: 80%; color: rgb(68, 68, 68); }
+
+h1, h2, h3 { letter-spacing: -0.01em; line-height: 1.2; font-weight: 600; m=
+argin-bottom: 0px; }
+
+.page-title { font-size: 2.5rem; font-weight: 700; margin-top: 0px; margin-=
+bottom: 0.75em; }
+
+h1 { font-size: 1.875rem; margin-top: 1.875rem; }
+
+h2 { font-size: 1.5rem; margin-top: 1.5rem; }
+
+h3 { font-size: 1.25rem; margin-top: 1.25rem; }
+
+.source { border: 1px solid rgb(221, 221, 221); border-radius: 3px; padding=
+: 1.5em; word-break: break-all; }
+
+.callout { border-radius: 3px; padding: 1rem; }
+
+figure { margin: 1.25em 0px; break-inside: avoid; }
+
+figcaption { opacity: 0.5; font-size: 85%; margin-top: 0.5em; }
+
+mark { background-color: transparent; }
+
+.indented { padding-left: 1.5em; }
+
+hr { background: transparent; display: block; width: 100%; height: 1px; vis=
+ibility: visible; border-top: none; border-right: none; border-left: none; =
+border-image: initial; border-bottom: 1px solid rgba(55, 53, 47, 0.09); }
+
+img { max-width: 100%; }
+
+@media only print {
+  img { max-height: 100vh; object-fit: contain; }
+}
+
+@page { margin: 1in; }
+
+.collection-content { font-size: 0.875rem; }
+
+.column-list { display: flex; justify-content: space-between; }
+
+.column { padding: 0px 1em; }
+
+.column:first-child { padding-left: 0px; }
+
+.column:last-child { padding-right: 0px; }
+
+.table_of_contents-item { display: block; font-size: 0.875rem; line-height:=
+ 1.3; padding: 0.125rem; }
+
+.table_of_contents-indent-1 { margin-left: 1.5rem; }
+
+.table_of_contents-indent-2 { margin-left: 3rem; }
+
+.table_of_contents-indent-3 { margin-left: 4.5rem; }
+
+.table_of_contents-link { text-decoration: none; opacity: 0.7; border-botto=
+m: 1px solid rgba(55, 53, 47, 0.18); }
+
+table, th, td { border: 1px solid rgba(55, 53, 47, 0.09); border-collapse: =
+collapse; }
+
+table { border-left: none; border-right: none; }
+
+th, td { font-weight: normal; padding: 0.25em 0.5em; line-height: 1.5; min-=
+height: 1.5em; text-align: left; }
+
+th { color: rgba(55, 53, 47, 0.6); }
+
+ol, ul { margin: 0px; margin-block: 0.6em; }
+
+li > ol:first-child, li > ul:first-child { margin-block-start: 0.6em; }
+
+ul > li { list-style: disc; }
+
+ul.to-do-list { text-indent: -1.7em; }
+
+ul.to-do-list > li { list-style: none; }
+
+.to-do-children-checked { text-decoration: line-through; opacity: 0.375; }
+
+ul.toggle > li { list-style: none; }
+
+ul { padding-inline-start: 1.7em; }
+
+ul > li { padding-left: 0.1em; }
+
+ol { padding-inline-start: 1.6em; }
+
+ol > li { padding-left: 0.2em; }
+
+.mono ol { padding-inline-start: 2em; }
+
+.mono ol > li { text-indent: -0.4em; }
+
+.toggle { padding-inline-start: 0em; list-style-type: none; }
+
+.toggle > li > details { padding-left: 1.7em; }
+
+.toggle > li > details > summary { margin-left: -1.1em; }
+
+.selected-value { display: inline-block; padding: 0px 0.5em; background: rg=
+ba(206, 205, 202, 0.5); border-radius: 3px; margin-right: 0.5em; margin-top=
+: 0.3em; margin-bottom: 0.3em; white-space: nowrap; }
+
+.collection-title { display: inline-block; margin-right: 1em; }
+
+.simple-table { margin-top: 1em; font-size: 0.875rem; empty-cells: show; }
+
+.simple-table td { height: 29px; min-width: 120px; }
+
+.simple-table th { height: 29px; min-width: 120px; }
+
+.simple-table-header-color { background: rgb(247, 246, 243); color: black; =
+}
+
+.simple-table-header { font-weight: 500; }
+
+time { opacity: 0.5; }
+
+.icon { display: inline-block; max-width: 1.2em; max-height: 1.2em; text-de=
+coration: none; vertical-align: text-bottom; margin-right: 0.5em; }
+
+img.icon { border-radius: 3px; }
+
+.user-icon { width: 1.5em; height: 1.5em; border-radius: 100%; margin-right=
+: 0.5rem; }
+
+.user-icon-inner { font-size: 0.8em; }
+
+.text-icon { border: 1px solid rgb(0, 0, 0); text-align: center; }
+
+.page-cover-image { display: block; object-fit: cover; width: 100%; max-hei=
+ght: 30vh; }
+
+.page-header-icon { font-size: 3rem; margin-bottom: 1rem; }
+
+.page-header-icon-with-cover { margin-top: -0.72em; margin-left: 0.07em; }
+
+.page-header-icon img { border-radius: 3px; }
+
+.link-to-page { margin: 1em 0px; padding: 0px; border: none; font-weight: 5=
+00; }
+
+p > .user { opacity: 0.5; }
+
+td > .user, td > time { white-space: nowrap; }
+
+input[type=3D"checkbox"] { transform: scale(1.5); margin-right: 0.6em; vert=
+ical-align: middle; }
+
+p { margin-top: 0.5em; margin-bottom: 0.5em; }
+
+.image { border: none; margin: 1.5em 0px; padding: 0px; border-radius: 0px;=
+ text-align: center; }
+
+.code, code { background: rgba(135, 131, 120, 0.15); padding: 0.2em 0.4em; =
+border-radius: 3px; font-size: 85%; tab-size: 2; }
+
+code { color: rgb(235, 87, 87); }
+
+.code { padding: 1.5em 1em; }
+
+.code-wrap { white-space: pre-wrap; word-break: break-all; }
+
+.code > code { background: none; padding: 0px; font-size: 100%; color: inhe=
+rit; }
+
+blockquote { font-size: 1.25em; margin: 1em 0px; padding-left: 1em; border-=
+left: 3px solid rgb(55, 53, 47); }
+
+.bookmark { text-decoration: none; max-height: 8em; padding: 0px; display: =
+flex; width: 100%; align-items: stretch; }
+
+.bookmark-title { font-size: 0.85em; overflow: hidden; text-overflow: ellip=
+sis; height: 1.75em; white-space: nowrap; }
+
+.bookmark-text { display: flex; flex-direction: column; }
+
+.bookmark-info { flex: 4 1 180px; padding: 12px 14px 14px; display: flex; f=
+lex-direction: column; justify-content: space-between; }
+
+.bookmark-image { width: 33%; flex: 1 1 180px; display: block; position: re=
+lative; object-fit: cover; border-radius: 1px; }
+
+.bookmark-description { color: rgba(55, 53, 47, 0.6); font-size: 0.75em; ov=
+erflow: hidden; max-height: 4.5em; word-break: break-word; }
+
+.bookmark-href { font-size: 0.75em; margin-top: 0.25em; }
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Seg=
+oe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji"=
+, "Segoe UI Symbol"; }
+
+.code { font-family: SFMono-Regular, Menlo, Consolas, "PT Mono", "Liberatio=
+n Mono", Courier, monospace; }
+
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSyst=
+emFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Seg=
+oe UI Emoji", "Segoe UI Symbol", Twemoji, "Noto Color Emoji", "Noto Sans CJ=
+K JP"; }
+
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, =
+BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans=
+-serif, "Segoe UI Emoji", "Segoe UI Symbol", Twemoji, "Noto Color Emoji", "=
+Noto Sans CJK SC"; }
+
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, =
+BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans=
+-serif, "Segoe UI Emoji", "Segoe UI Symbol", Twemoji, "Noto Color Emoji", "=
+Noto Sans CJK TC"; }
+
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, =
+BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans=
+-serif, "Segoe UI Emoji", "Segoe UI Symbol", Twemoji, "Noto Color Emoji", "=
+Noto Sans CJK KR"; }
+
+.pdf .code { font-family: "Source Code Pro", SFMono-Regular, Menlo, Consola=
+s, "PT Mono", "Liberation Mono", Courier, monospace, Twemoji, "Noto Color E=
+moji", "Noto Sans Mono CJK JP"; }
+
+.pdf:lang(zh-CN) .code { font-family: "Source Code Pro", SFMono-Regular, Me=
+nlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, Twemoji, "=
+Noto Color Emoji", "Noto Sans Mono CJK SC"; }
+
+.pdf:lang(zh-TW) .code { font-family: "Source Code Pro", SFMono-Regular, Me=
+nlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, Twemoji, "=
+Noto Color Emoji", "Noto Sans Mono CJK TC"; }
+
+.pdf:lang(ko-KR) .code { font-family: "Source Code Pro", SFMono-Regular, Me=
+nlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, Twemoji, "=
+Noto Color Emoji", "Noto Sans Mono CJK KR"; }
+
+.pdf .serif { font-family: "PT Serif", Lyon-Text, Georgia, ui-serif, serif,=
+ Twemoji, "Noto Color Emoji", "Noto Serif CJK JP"; }
+
+.pdf:lang(zh-CN) .serif { font-family: "PT Serif", Lyon-Text, Georgia, ui-s=
+erif, serif, Twemoji, "Noto Color Emoji", "Noto Serif CJK SC"; }
+
+.pdf:lang(zh-TW) .serif { font-family: "PT Serif", Lyon-Text, Georgia, ui-s=
+erif, serif, Twemoji, "Noto Color Emoji", "Noto Serif CJK TC"; }
+
+.pdf:lang(ko-KR) .serif { font-family: "PT Serif", Lyon-Text, Georgia, ui-s=
+erif, serif, Twemoji, "Noto Color Emoji", "Noto Serif CJK KR"; }
+
+.pdf .mono { font-family: "PT Mono", iawriter-mono, Nitti, Menlo, Courier, =
+monospace, Twemoji, "Noto Color Emoji", "Noto Sans Mono CJK JP"; }
+
+.pdf:lang(zh-CN) .mono { font-family: "PT Mono", iawriter-mono, Nitti, Menl=
+o, Courier, monospace, Twemoji, "Noto Color Emoji", "Noto Sans Mono CJK SC"=
+; }
+
+.pdf:lang(zh-TW) .mono { font-family: "PT Mono", iawriter-mono, Nitti, Menl=
+o, Courier, monospace, Twemoji, "Noto Color Emoji", "Noto Sans Mono CJK TC"=
+; }
+
+.pdf:lang(ko-KR) .mono { font-family: "PT Mono", iawriter-mono, Nitti, Menl=
+o, Courier, monospace, Twemoji, "Noto Color Emoji", "Noto Sans Mono CJK KR"=
+; }
+
+.highlight-default { color: rgb(55, 53, 47); }
+
+.highlight-gray { color: rgb(120, 119, 116); fill: rgb(120, 119, 116); }
+
+.highlight-brown { color: rgb(159, 107, 83); fill: rgb(159, 107, 83); }
+
+.highlight-orange { color: rgb(217, 115, 13); fill: rgb(217, 115, 13); }
+
+.highlight-yellow { color: rgb(203, 145, 47); fill: rgb(203, 145, 47); }
+
+.highlight-teal { color: rgb(68, 131, 97); fill: rgb(68, 131, 97); }
+
+.highlight-blue { color: rgb(51, 126, 169); fill: rgb(51, 126, 169); }
+
+.highlight-purple { color: rgb(144, 101, 176); fill: rgb(144, 101, 176); }
+
+.highlight-pink { color: rgb(193, 76, 138); fill: rgb(193, 76, 138); }
+
+.highlight-red { color: rgb(212, 76, 71); fill: rgb(212, 76, 71); }
+
+.highlight-gray_background { background: rgb(241, 241, 239); }
+
+.highlight-brown_background { background: rgb(244, 238, 238); }
+
+.highlight-orange_background { background: rgb(251, 236, 221); }
+
+.highlight-yellow_background { background: rgb(251, 243, 219); }
+
+.highlight-teal_background { background: rgb(237, 243, 236); }
+
+.highlight-blue_background { background: rgb(231, 243, 248); }
+
+.highlight-purple_background { background: rgba(244, 240, 247, 0.8); }
+
+.highlight-pink_background { background: rgba(249, 238, 243, 0.8); }
+
+.highlight-red_background { background: rgb(253, 235, 236); }
+
+.block-color-default { color: inherit; fill: inherit; }
+
+.block-color-gray { color: rgb(120, 119, 116); fill: rgb(120, 119, 116); }
+
+.block-color-brown { color: rgb(159, 107, 83); fill: rgb(159, 107, 83); }
+
+.block-color-orange { color: rgb(217, 115, 13); fill: rgb(217, 115, 13); }
+
+.block-color-yellow { color: rgb(203, 145, 47); fill: rgb(203, 145, 47); }
+
+.block-color-teal { color: rgb(68, 131, 97); fill: rgb(68, 131, 97); }
+
+.block-color-blue { color: rgb(51, 126, 169); fill: rgb(51, 126, 169); }
+
+.block-color-purple { color: rgb(144, 101, 176); fill: rgb(144, 101, 176); =
+}
+
+.block-color-pink { color: rgb(193, 76, 138); fill: rgb(193, 76, 138); }
+
+.block-color-red { color: rgb(212, 76, 71); fill: rgb(212, 76, 71); }
+
+.block-color-gray_background { background: rgb(241, 241, 239); }
+
+.block-color-brown_background { background: rgb(244, 238, 238); }
+
+.block-color-orange_background { background: rgb(251, 236, 221); }
+
+.block-color-yellow_background { background: rgb(251, 243, 219); }
+
+.block-color-teal_background { background: rgb(237, 243, 236); }
+
+.block-color-blue_background { background: rgb(231, 243, 248); }
+
+.block-color-purple_background { background: rgba(244, 240, 247, 0.8); }
+
+.block-color-pink_background { background: rgba(249, 238, 243, 0.8); }
+
+.block-color-red_background { background: rgb(253, 235, 236); }
+
+.select-value-color-pink { background-color: rgb(245, 224, 233); }
+
+.select-value-color-purple { background-color: rgb(232, 222, 238); }
+
+.select-value-color-green { background-color: rgb(219, 237, 219); }
+
+.select-value-color-gray { background-color: rgb(227, 226, 224); }
+
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.04=
+); }
+
+.select-value-color-orange { background-color: rgb(250, 222, 201); }
+
+.select-value-color-brown { background-color: rgb(238, 224, 218); }
+
+.select-value-color-red { background-color: rgb(255, 226, 221); }
+
+.select-value-color-yellow { background-color: rgb(253, 236, 200); }
+
+.select-value-color-blue { background-color: rgb(211, 229, 239); }
+
+.checkbox { display: inline-flex; vertical-align: text-bottom; width: 16px;=
+ height: 16px; background-size: 16px; margin-left: 2px; margin-right: 5px; =
+}
+
+.checkbox-on { background-image: url("data:image/svg+xml;charset=3DUTF-8,%3=
+Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%=
+22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22=
+%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%=
+22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.7143=
+6L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fi=
+ll%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E"); }
+
+.checkbox-off { background-image: url("data:image/svg+xml;charset=3DUTF-8,%=
+3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016=
+%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%2=
+2%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20hei=
+ght%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-w=
+idth%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E"); }
+------MultipartBoundary--RmK1zNTmaVWeJ7F1ol0HF6upKAOWg7O7xDArGusHI8------
