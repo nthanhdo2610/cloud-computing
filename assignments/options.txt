@@ -1,0 +1,23 @@
+[
+    {
+        "Namespace": "aws:autoscaling:launchconfiguration",
+        "OptionName": "IamInstanceProfile",
+        "Value": "eb-ec2-role"
+    }
+]
+
+aws elasticbeanstalk check-dns-availability --cname-prefix my-cname
+
+aws elasticbeanstalk describe-application-versions --application-name my-nodejs --version-label my-nodejs-v1
+
+aws elasticbeanstalk create-application --application-name my-nodejs
+
+aws elasticbeanstalk create-application-version --application-name my-nodejs --version-label my-nodejs-v1 --source-bundle S3Bucket=elasticbeanstalk-us-east-1-226439798196,S3Key=nodejs.zip
+
+aws elasticbeanstalk describe-application-versions --application-name my-nodejs --version-label my-nodejs-v1
+
+aws elasticbeanstalk create-configuration-template --application-name my-nodejs --template-name my-nodejs-v1 --solution-stack-name "64bit Amazon Linux 2 v5.8.2 running Node.js 18"
+
+aws elasticbeanstalk create-environment --cname-prefix my-cname --application-name my-nodejs --template-name my-nodejs-v1 --version-label my-nodejs-v1 --environment-name my-nodejs-v1clone --option-settings file://Desktop/git-repo/cloud-computing/assignments/options.txt
+
+aws elasticbeanstalk describe-environments --environment-names my-nodejs-v1clone
