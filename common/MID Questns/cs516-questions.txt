@@ -1,0 +1,45 @@
+1. When should you use PaaS?
+	A. When you need low-level OS configurations.
+	B. When you have code without resources. (Answer)	
+	C. When you need a great web UI. 
+	D. All of the above.
+2. Select one software below that is similar to EC2:
+	A. GitHub.
+	B. Firebase.
+	C. Visual Studio Code.
+	D. Docker. (Answer)
+3. Which one below does not relate to identity-based policies?
+	A. User.
+	B. Role.
+	C. Group.
+	D. Bucket. (Answer)
+4. Select one false about S3:
+	A. Unique bucket name.
+	B. Scale infinitely.
+	C. Regional service.
+	D. Small size. (Answer)
+5. When using RDS, you will be charged by:
+	A. Per image.
+	B. Per bucket.
+	C. Per OS.
+	D. None of these. (Answer)
+6. Which feature does ALB support?
+	A. Storage.
+	B. Web sockets.
+	C. Authentication.
+	D. B & C. (Answer)
+7. Which OSI layer does NLB operate on?
+	A. 8.
+	B. 1.
+	C. 4. (Answer)
+	D. 7.
+8. Does SQS automatically delete messages?
+	A. Yes, every 5 minutes.
+	B. Never. (Answer)
+	C. Yes, every 1 hour.
+	D. None of these.
+9. Which protocol below that SNS does not support?
+	A. Email.
+	B. SQS.
+	C. Lambda.
+	D. VPC. (Answer)

@@ -1,0 +1,53 @@
+1.	Which architecture does Lambda Function is based upon?
+	a.	IaaS
+	b.	FaaS *
+	c.	CaaS
+	d.	SaaS
+
+2.	Which EBS volume type has IOPS that is equal to three time the volume size?
+	a.	Provisioned
+	b.	General-purpose *
+	c.	Magnetic
+	d.	All of the above
+
+3.	Object identification in S3 bucket is based upon
+	a.	Object Name
+	b.	Key of the object
+	c.	A combination of key, bucket and version *
+	d.	None of the above.
+
+4.	Which OSI layer does Application Load Balancers work on?
+	a.	Layer 2
+	b.	Layer 6
+	c.	Layer 4
+	d.	Layer 7 *
+
+5.	For auto scaling of instances, which of the following is true?
+	a.	For upscaling, the data points are higher than downscaling.
+	b.	Upscaling is faster than downscaling.
+	c.	None of the above
+	d.	All of the above *
+
+6.	In deployment of RDS on multiple availability zones, which one of the following is true?
+	a.	Maintains asynchronous stand by replicas in each AZ.
+	b.	Maintains synchronous stand by replicas in each AZ. *
+	c.	Replicas need to be defined manually.
+	d.	Need to define whether to create synchronous or asynchronous replicas.
+
+7.	Which of the following about the Amazon SQS queue is false:
+	a.	Both have unlimited throughput. *
+	b.	FIFO queue maintains proper order of delivery.
+	c.	Standard queue can have more than one delivery.
+	d.	Both can have duplication ID associated with them.
+
+8.	Circuit breaker design pattern is used to 
+	a.	Detect failures. *
+	b.	Perform maintenance in case of failure
+	c.	Secure data from loss.
+	d.	None of the above.
+
+9.	What is hierarchy maintained in IAM? (left most has less privilege)
+	a.	Root user, IAM user, Temporary access
+	b.	IAM user, Root user, Temporary access
+	c.	Temporary access, IAM user, Root user *
+	d.	Root has most privilege and IAM and Temporary access users have same level of privilege.

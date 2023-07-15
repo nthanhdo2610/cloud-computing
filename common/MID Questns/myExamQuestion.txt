@@ -1,0 +1,40 @@
+1. Which of the following cloud service models gives more control over IT resource compared to others 
+	A. IaaS *  B. PaaS  C. Saas D. None		
+
+2. If you are running multiple instances over different avalablity zones and you want to use volume which all instances could share you would use ?
+	A. EBS	B. EFS *  C. S3	 D. None		
+
+3. What is the format of an IAM policy
+	A. XML	B. yaml	 C. txt	 D. JSON *
+
+4. Not the benfit of Multipart upload
+	A. Good for uploading an object which its size is unknown 
+	B. Good for uplading huge file typically files greater than 100MB
+	C. Enables you to pause and resume your upload
+	D. All of the above are benefits *
+
+5. Which Amazon RDS support Muti-AZ
+	A. MySql B. PostgreSQL C. Amazon Aurora	D. All *
+
+6. Which of the following is false regarding Netwok Load Balancer
+	A. Faster than Application Load Balancer
+	B. Client connection terminates at NLB *
+	C. Routes connection based on IP protocol 
+	D. Works on layer 4 (Transport) of the OSI Model
+
+7. How many instance will be launch after Auto Scale launch configuration
+	A. The Desired Capacity *
+	B. The Minimum Capacity
+	C. The Maximum Capacity
+	D. None
+8. In the FIFO queue type which of the following is a must to have for no duplication
+	A. Message duplication ID
+	B. Message Group ID
+	C. A & B *
+	D. None of the above
+9. Which of the following is the components of SNS
+	A. Publisher
+	B. Subscriber 
+	C. Topic 
+	D. All *
+

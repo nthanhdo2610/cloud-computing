@@ -1,0 +1,54 @@
+1. Cloud Computing (Cloud services models or Core services)
+	Q. In which of the following service models the hardware is virtualized in the cloud? (Answer: d)
+	a. NaaS
+	b. PaaS
+	c. CaaS
+	d. LaaS
+2. EC2
+	Q. Which EC2 Purchasing Option can provide you the biggest discount, but it is not suitable for critical jobs or databases? (Answer: c)
+	a. Convertible Reserved Instances
+	b. Dedicated Hosts
+	c. Spot Instances
+	d. On Demand
+3. IAM
+	Q. What is a proper definition of an IAM Role? (Answer: b)
+	a. IAM Users in multiple User Groups
+	b. An IAM entity that defines a set of permissions for making requests to AWS services, and will be used by an AWS service
+	c. An IAM entity that defines a password policy for IAM Users
+	d. Permissions assigned to IAM Users to perform actions
+4. S3
+	Q. You have a 25 GB file that you're trying to upload to S3 but you're getting errors. What is a possible solution for this? (Answer: c)
+	a. The file size limit on S3 is 5 GB
+	b. Update your bucket policy to allow the larger file
+	c. Use Multi-Part upload when uploading files larger than 5GB
+	d. Encrypt the file
+5. RDS
+	Q. Amazon RDS supports the following databases, EXCEPT: (Answer: a)
+	a. MongoDB
+	b. MySQL
+	c. MariaDB
+	d. Microsoft SQL Server
+6. ALB
+	Q. Application Load Balancers support the following protocols, EXCEPT: (Answer: d)
+	a. HTTP
+	b. HTTPS
+	c. WebSocket
+	d. TCP
+7. ASG
+	Q. You have an application hosted on a set of EC2 instances managed by an Auto Scaling Group that you configured both desired and maximum capacity to 3. Also, you have created a CloudWatch Alarm that is configured to scale out your ASG when CPU Utilization reaches 60%. Your application suddenly received huge traffic and is now running at 80% CPU Utilization. What will happen? (Answer: b)
+	a. The desired capacity will go up to 4 and the maximum capacity will stay at 3
+	b. Nothing
+	c. The desired capacity will go up to 4 and the maximum capacity will stay at 4
+	d. ASG will shut down
+8. SQS
+	Q. You have an SQS Queue where each consumer polls 10 messages at a time and finishes processing them in 1 minute. After a while, you noticed that the same SQS messages are received by different consumers resulting in your messages being processed more than once. What should you do to resolve this issue? (Answer: c)
+	a. Enable Long Polling
+	b. Add DelaySeconds parameter to the messages when being produced
+	c. Increase the Visibility Timeout
+	d. Decrease the Visibility Timeout
+9. SNS
+	Q. Which of the following is NOT a supported subscriber for AWS SNS? (Answer: a)
+	a. Amazon Kinesis Data Streams
+	b. Amazon SQS
+	c. AWS Lambda
+	d. HTTP(S) Endpoint

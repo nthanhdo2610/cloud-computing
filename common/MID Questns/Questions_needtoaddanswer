@@ -1,0 +1,55 @@
+1. What is an event bridge in AWS? 
+(a) Serverless event bus that connects application data from other apps and AWS services
+b) Transfer files from EC2 instance to S3 bucket
+c) Alarm service to trigger a specific event
+d) Event to trigger any operation on EC2 instance
+
+2. What kind of IP address is provided by EC2 instance?
+a) Private IP address
+(b) Public IP address
+c) Static IP address
+d) Dynamic IP address
+
+3. What kind of S3 storage class should we use for long-term archival storage?
+a) S3 Intelligent-Tiering
+b) S3 Standard
+(c) Glacier
+d) S3 One Zone IA
+
+4. IAM Policies are permissions assigned to any ...
+a) User
+b) Group
+c) Roles
+(d) All of the above
+
+5.  You manage your DB engine configuration by associating your DB
+instances with
+a) ASG
+(b) parameter groups
+c) ELB
+d) ALB
+
+6.  In which OSI layer the ALB works in AWS?
+(a) layer 7
+b) layer 4
+c) layer 2
+c) layer 1
+
+7.  What is target tracking scaling?
+a) Scale a resource based on S3 buckets
+b) Scale a resource based on loadbalancer
+c) Scale a resource based on circuit breaker
+(d) Scale a resource based on a target value for a specific CloudWatch metric. Like thermostat at your home.
+
+8.  The message ... is the tag that specifies that a message belongs to a specific message group.
+a) deduplication ID
+(b) group ID
+c) attribute ID
+d) notification ID
+
+9.  In SNS publishers communicate asynchronously with subscribers by producing and sending a message to a ...
+a) group
+b) EC2 instance
+(c) topic
+d) queue
+

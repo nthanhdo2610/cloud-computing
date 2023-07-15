@@ -1,0 +1,114 @@
+EBS, EFS and S3 are like a _______ in traditional infrastructure.
+a) server
+b) hard drive
+c) relational database
+d) network
+
+answer is "b"
+
+
+-----------------------------
+
+One of the following is not a cloud benefit.
+a) You do have to guess capacity
+b) Secure
+c) Do less and achieve more
+d) Performant
+
+answer is "a"
+
+
+--------------------------------
+
+
+What does Reliable means in cloud benefits?
+When running apps and stored data are being handled by multiple data centers (availability zone), or even multiple regions. That will improve:
+- High availability and fault tolerance for the apps.
+- Durability of the data.
+- Even more, the cloud will help in scaling your app and data.
+
+
+--------------------------------------------------
+
+
+Amazon S3 autoscaling enables you to scale in or out to handle
+changes in requirements or spikes in popularity, reducing your need to
+forecast traffic.
+
+False, EC2
+
+
+----------------------------------------------------
+
+IAM refers to ______
+a) Image of Amazon Machine
+b) Identity of Amazon Machines
+c) Identity and Access Management
+d) Image Access Machine
+
+answer is "c"
+
+
+------------------------------------------------------------
+
+
+EBS volumes are highly available and reliable storage volumes
+that can be attached to any running instance that is in a
+different Availability Zone.
+
+False, same AZ
+
+-------------------------------------------------------------
+
+
+One of the following is not S3 storage class.
+a) S3 Intelligent-Tiering
+b) S3 One Zone IA
+c) Glacier Lite Archive
+d) S3 Standard
+
+answer is "c"
+
+
+-------------------------------------
+
+One of the following is not a type of ELB.
+a) Common Load Balancer
+b) Network Load Balancer
+c) Gateway Load Balancer
+d) Application Load Balancer
+
+answer is "a"
+
+----------------------------------------
+
+
+One of the following is not a Scaling policy.
+a) Scheduled scaling
+b) Performance scaling
+c) Target tracking scaling
+d) Step scaling
+
+answer is "b"
+
+------------------------------------
+
+Backups are manually enabled in RDS. Initially, the retention period will be
+7 days by default. You can decrease or increase it up to 35 days.
+
+False, automatically enabled daily
+
+--------------------------------------
+
+SQS offers a secure, durable, and available hosted queue that lets you
+integrate and couple distributed software systems and components.
+
+False, decouple
+
+------------------------------------------------
+
+
+Amazon SNS lets you queue notifications from mobile apps, text messages
+from mobile phone numbers, and plain-text emails from email addresses.
+
+False, it sends to different channels

@@ -1,0 +1,37 @@
+1. What is not benefit of the cloud?
+ a.Performant, 
+b.Built in metric, 
+c.secure, 
+d. Expensive 
+Correct:d
+2. Which is ALB features that NLB doesn’t support?
+   a. Network slitting
+   b. Health check
+   c. Web socket
+   d. monitoring
+   Correct: B
+3. NLB is what layer of load balancing?
+   a. 1
+   b. 4
+   c. 3
+   d.7
+   Correct: B
+4. What is Aurora V2 difference when scaling?
+   a.Increase ACU by triple
+   b. Increase ACU incrementally
+   c. Increase ACU by double
+   d. Incease ACU by 20%
+   Correct:b
+
+7.SQS Fifo queue which one is correct?
+a.Group id and deduplication id is required
+b.Only Group id is required
+c.Only deduplication is required,
+d. none of the are required.
+Correct:a
+8.In order to filter msg in SNS what should we need to pass along with msg?
+a.Message key
+b.Message attributes
+c.Message policy
+d.Message payload.
+Correct: b

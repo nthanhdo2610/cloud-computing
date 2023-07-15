@@ -1,0 +1,43 @@
+1.	Which architecture does Lambda Function is based upon?
+	a.	IaaS
+	b.	FaaS *
+	c.	CaaS
+	d.	SaaS
+2: You would like to deploy a High-Performance Computing (HPC) application on EC2 instances. Which EC2 instance type should you choose?
+   a. Storage Optimized 
+   b. Compute Optimized *
+   c. Memory Optimized 
+   d. General Purpose
+3: Which answer is INCORRECT regarding IAM Users?
+   a. IAM Users can belong to multiple Users Group 
+   b. IAM Users don't have to belong to Users Group 
+   c. IAM Policies can be attached directly to IAM Users 
+   d. IAM Users access AWS services using root account credentials *
+4:You have a 25 GB file that you're trying to upload to S3 but you're getting errors. What is a possible solution for this?
+   a. The file size limit on S3 is 5GB 
+   b. Update the bucket policy to allow larger file 
+   C. Use multi-part upload when uploading files larger than 5GB *
+   d. encrypt the file
+5: Amazon RDS supports the following databases, EXCEPT:
+   a. MongoDB * 
+   b. MySQL 
+   c. MariaDB 
+   d. Microsoft SQL Server
+6:Application Load Balancers support the following protocols, EXCEPT:
+   a. HTTP 
+   b. HTTPS 
+   C. TCP *
+   d. WebSocket
+7: Running an application on an Auto Scaling Group that scales the number of EC2 instances in and out is called .....................
+   a. Horizontal Scalability *
+   b. Vertical Scalability
+8: Which SQS Queue type allows your messages to be processed exactly once and in order?
+   a. SQS Standard Queue 
+   b. SQS Dead Letter Queue 
+   c. SQS delay Queue 
+   d. SQS FIFO Queue *
+9: Which AWS service helps you when you want to send email notifications to your users?
+   a. Amazon SQS with AWS Lambda 
+   b. Amazon SNS *
+   c. Amazon S3 EventNotification 
+   d. Amazon Kinesis
